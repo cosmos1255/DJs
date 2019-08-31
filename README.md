@@ -1,5 +1,5 @@
 # Blake and the DJs
-Group for POOS project files
+Group for POOSD project files
 
 Tasks:
 
