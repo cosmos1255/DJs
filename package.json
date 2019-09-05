@@ -1,0 +1,22 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "A way to organize contacts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cosmos1255/DJs.git"
+  },
+  "author": "DB & Js",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cosmos1255/DJs/issues"
+  },
+  "homepage": "https://github.com/cosmos1255/DJs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
