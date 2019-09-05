@@ -1,4 +1,4 @@
-# Blake and the DJs
+# DB and the Js
 Group for POOSD project files
 
 Tasks:
