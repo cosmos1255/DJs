@@ -3,7 +3,7 @@ Group for POOSD project files
 
 Tasks:
 
-	-> Implement LAMP Stack from AWS
+	-> Implement MEAN Stack from AWS
 	
 	-> Web development (front-end)
 	
