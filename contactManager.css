@@ -1,32 +1,63 @@
-h1, h2, h3, h4
+h1
 {
-	color: blue;
-	font-family: sans-serif;
+	color: #1e90ff;
+	font-family: georgia;
 	text-align: center;
+	font-size: 50px;
 }
-.column
+#header
 {
-	float: right;
-	width: 60%;
+	background-size: cover;
+	margin: 0 auto;
+	width: 100%;
 }
 body
 {
-	background-color: gray;
+	background-color: #ffffed;
 }
-caption
+p
 {
-	color: blue;
+	color: #000000;
 	text-align: center;
+	font-family: georgia;
+	font-size: 25px;
 }
 table, th, td
 {
-	border: 1px solid black;
+	border: 2px solid #000000;
 	border-collapse: collapse;
 	background-color: white;
+	margin: auto;
 }
-button
+th
 {
-	text-align: center;
-	color: black;
-	background-color: white;
+	color: #000000;
+	font-family: georgia;
+	font-size: 30px;
+}
+td
+{
+	padding: 40px;
+	font-family: georgia;
+	font-size: 18px;
+}
+
+input[type=submit]
+{
+	background-color: #1e90ff;
+	border: none;
+	margin: 4px 2px;
+	padding: 7px 15px;
+	font-family: georgia;
+	font-size: 15px;
+}
+input[type=text], input[type=password]
+{
+	background-color: #ffffff;
+	margin: 8px 0;
+}
+label
+{
+	color: #000000;
+	font-family: georgia;
 }
