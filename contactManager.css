@@ -1,1 +1,32 @@
-
+h1, h2, h3, h4
+{
+	color: blue;
+	font-family: sans-serif;
+	text-align: center;
+}
+.column
+{
+	float: right;
+	width: 60%;
+}
+body
+{
+	background-color: gray;
+}
+caption
+{
+	color: blue;
+	text-align: center;
+}
+table, th, td
+{
+	border: 1px solid black;
+	border-collapse: collapse;
+	background-color: white;
+}
+button
+{
+	text-align: center;
+	color: black;
+	background-color: white;
+}
