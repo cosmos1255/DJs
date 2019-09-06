@@ -5,42 +5,50 @@
 		<link href="./contactManager.css" type="text/css" rel="stylesheet">
 	</head>
 	<body>
-		<h1>Welcome to the Contact Manager.</h1>
-		<br>
-		<br>
-		<br>
-		<div class="column">
-			<!-- Separate columns -->
+		<div id="header">
+			<h1>Welcome to the Contact Manager</h1>
+		</div>
+		<div id="table">
 			<table>
-				<caption><h2>Create a new account or login to an existing account.</h2></caption>
+				<p>Create a new account or login to an existing account.</p>
 				<thead>
 					<th><h3>Login</h3></th>
 					<th><h3>Sign-Up</h3></th>
 				</thead>
-				<tbody>
-					<td>
-						<h4>Username</h4>
-						<input type="textarea"></input>
-						<h4>Password</h4>
-						<input type="textarea"></input>
+				<td>
+					<form>
+						<label for="Username">Username</label>
 						<br>
-						<button type="submit">Login</button>
-					</td>
-					<td>
-						<h4>First Name</h4>
-						<input type="textarea"></input>
-						<h4>Last Name</h4>
-						<input type="textarea"></input>
-						<!--make a pop-up that gives instructions for
-						 Username/Password parameters-->
-						<h4>Username</h4>
-						<input type="textarea"></input>
-						<h4>Password</h4>
-						<input type="textarea"></input>
+						<input type="text" id="Username" name="Username">
 						<br>
-						<button type="submit">Sign-Up</button>
-					</td>
-				</tbody>
+						<label for="password">Password</label>
+						<br>
+						<input type="password" id="password" name="password">
+						<br>
+						<input type="submit" value="Submit">
+					</form>
+				</td>
+				<td>
+					<form>
+						<label for="fname">First Name</label>
+						<br>
+						<input type="text" id="fname" name="fname">
+						<br>
+						<label for="lname">Last Name</label>
+						<br>
+						<input type="text" id="lname" name="lname">
+						<br>
+						<label for="Username">Username</label>
+						<br>
+						<input type="text" id="Username" name="Username">
+						<br>
+						<label for="password">Password</label>
+						<br>
+						<input type="password" id="password" name="password">
+						<br>
+						<input type="submit" value="Submit">
+					</form>
+				</td>
 			</table>
 		</div>
 	</body>
