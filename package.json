@@ -15,8 +15,9 @@
   "bugs": {
     "url": "https://github.com/cosmos1255/DJs/issues"
   },
-  "homepage": "https://github.com/cosmos1255/DJs#readme",
+  "homepage": "https://ec2-18-221-247-1.us-east-2.compute.amazonaws.com",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.6.13"
   }
 }
