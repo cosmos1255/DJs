@@ -1,23 +1,24 @@
 h1
 {
-	color: #1e90ff;
+	color: #ffeeee;
 	font-family: georgia;
 	text-align: center;
 	font-size: 50px;
 }
 #header
 {
-	background-size: cover;
+	background-size: auto;
 	margin: 0 auto;
 	width: 100%;
 }
 body
 {
-	background-color: #ffffed;
+	background: linear-gradient(-45deg,#35577D, #141E30);
+	background-repeat: repeat;
 }
 p
 {
-	color: #000000;
+	color: #ffffee;
 	text-align: center;
 	font-family: georgia;
 	font-size: 25px;
@@ -33,7 +34,7 @@ th
 {
 	color: #000000;
 	font-family: georgia;
-	font-size: 30px;
+	font-size: 28px;
 }
 td
 {
