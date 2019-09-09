@@ -2,9 +2,10 @@
   "name": "package.json",
   "version": "1.0.0",
   "description": "A way to organize contacts",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,8 +16,13 @@
   "bugs": {
     "url": "https://github.com/cosmos1255/DJs/issues"
   },
-  "homepage": "https://github.com/cosmos1255/DJs#readme",
+  "homepage": "https://ec2-18-221-247-1.us-east-2.compute.amazonaws.com",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^3.3.2",
+    "mongoose": "^5.6.13"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
   }
 }
