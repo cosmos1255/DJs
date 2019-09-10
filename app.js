@@ -3,7 +3,7 @@ var app = express();
 const path = require('path');
 
 const mongo = require('mongodb').MongoClient;
-const uri = "mongodb+srv://<blakewrobertson@knights.ucf.edu>:<g3cop4331>@cluster0-2n09e.mongodb.net/test?retryWrites=true&w=majority";
+const uri =  "mongodb+srv://:@cluster0-2n09e.mongodb.net/test?retryWrites=true&w=majority"
 
 mongo.connect(uri, {
   useNewUrlParser: true,
