@@ -9,7 +9,7 @@
    
 ## AWS - EC2 instance (Virtual Machine or Hosting):
 Remember to copy the _sampleMeanSmallProject.pem_ into your computer. 
-Use the full path to poit there or navigate to the location of the pem and then use it to connecting throug SSH.
+Use the full path to point there or navigate to the location of the pem and then use it to connecting throug SSH.
 
 **Public DNS (IPv4):** ec2-18-221-247-1.us-east-2.compute.amazonaws.com
 
