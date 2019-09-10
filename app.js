@@ -2,13 +2,17 @@ var express = require('express');
 var app = express();
 const path = require('path');
 
-const MongoClient = require('mongodb').MongoClient;
+onst mongo = require('mongodb').MongoClient;
 const uri = "mongodb+srv://<blakewrobertson@knights.ucf.edu>:<g3cop4331>@cluster0-2n09e.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
+
+mongo.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}, (err, client) => {
+if (err) {
+  console.error(err)
+  return
+}
 });
 
 
