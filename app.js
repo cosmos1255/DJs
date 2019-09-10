@@ -3,7 +3,7 @@ var app = express();
 const path = require('path');
 
 const mongo = require('mongodb').MongoClient;
-const url = 'mongodb://group3:group3cop4331@ec2-18-221-247-1.us-east-2.compute.amazonaws.com:27017';
+const url = 'mongodb+srv://<group3>:<group3cop4331>@cluster0-2n09e.mongodb.net/test?retryWrites=true&w=majority';
 
 
 
@@ -24,4 +24,5 @@ app.use(express.static('public'));
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');  
 });
+
 app.listen(8080);
