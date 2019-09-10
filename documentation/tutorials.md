@@ -16,3 +16,6 @@ Be mindful to place updated stuff that could help us to understand what we are d
 
 ## REST API for MongoDB
 (Still nothing great, feel free to add one that you found useful to learn)
+
+## Deply Web App
+-Into AWS: https://scotch.io/tutorials/deploying-a-mean-app-to-amazon-ec2-part-1
