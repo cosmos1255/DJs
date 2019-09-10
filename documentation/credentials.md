@@ -16,17 +16,28 @@ Use the full path to point there or navigate to the location of the pem and then
 **Pv4 Public IP:** 18.221.247.1
 
 ### To connect from UNIX based terminal (Mac OS, Ubuntu, etc.)
+
+Only Run this first command the first time
 ```
 $ chmod 400 sampleMeanContactList.pem
 ```
 ```
 $ ssh -i "sampleMeanContactList.pem" ubuntu@ec2-18-221-247-1.us-east-2.compute.amazonaws.com
 ```
+### This will open the Bitmani Linux VM
+
+1. Clone the git repository into the directory
+2. Download any software like we did on local machine (In Linux)
+
 ### To connect from Windows
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html
 
-### See the website running from browser
 
-(Do not forget to run Node)
+### Run the app
+```
+$ npm start
+```
+
+### See the website running from browser
 
 **URL:** http://ec2-18-221-247-1.us-east-2.compute.amazonaws.com:8080/
