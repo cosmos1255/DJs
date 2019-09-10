@@ -1,0 +1,64 @@
+h1
+{
+	color: #ffeeee;
+	font-family: georgia;
+	text-align: center;
+	font-size: 50px;
+}
+#header
+{
+	background-size: auto;
+	margin: 0 auto;
+	width: 100%;
+}
+body
+{
+	background: linear-gradient(-45deg,#35577D, #141E30);
+	background-repeat: repeat;
+}
+p
+{
+	color: #ffffee;
+	text-align: center;
+	font-family: georgia;
+	font-size: 25px;
+}
+table, th, td
+{
+	border: 2px solid #000000;
+	border-collapse: collapse;
+	background-color: white;
+	margin: auto;
+}
+th
+{
+	color: #000000;
+	font-family: georgia;
+	font-size: 28px;
+}
+td
+{
+	padding: 40px;
+	font-family: georgia;
+	font-size: 18px;
+}
+
+input[type=submit]
+{
+	background-color: #1e90ff;
+	border: none;
+	margin: 4px 2px;
+	padding: 7px 15px;
+	font-family: georgia;
+	font-size: 15px;
+}
+input[type=text], input[type=password]
+{
+	background-color: #ffffff;
+	margin: 8px 0;
+}
+label
+{
+	color: #000000;
+	font-family: georgia;
+}
