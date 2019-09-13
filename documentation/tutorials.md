@@ -15,7 +15,7 @@ Be mindful to place updated stuff that could help us to understand what we are d
 (kind of basic, but feel free to add one that you found useful to learn)
 
 ## REST API for MongoDB
-(Still nothing great, feel free to add one that you found useful to learn)
+- How to build a RESTful API with NodeJS, ExpressJs and MongoDB: https://medium.com/@dinyangetoh/how-to-build-simple-restful-api-with-nodejs-expressjs-and-mongodb-99348012925d
 
 ## Deploy Web App
--Into AWS: https://scotch.io/tutorials/deploying-a-mean-app-to-amazon-ec2-part-1
+- Into AWS: https://scotch.io/tutorials/deploying-a-mean-app-to-amazon-ec2-part-1
