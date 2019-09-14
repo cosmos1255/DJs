@@ -80,6 +80,7 @@ button[type=submit]
 {
 	background-color: #1e90ff;
 	border: none;
+	color: #eeeeee;
 	margin: 4px 2px;
 	padding: 7px 15px;
 	font-family: georgia;
