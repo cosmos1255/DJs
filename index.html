@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <!-- home page for Contact Manager -->
-<html lang="en">
+<html>
 	<head>
-		<meta charset="ucf-8">
 		<title>Contact Manager</title>
 		<link href="./css/style.css" type="text/css" rel="stylesheet">
 		<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
@@ -26,70 +25,34 @@
 				</thead>
 				<td>
 					<form id="login">
-						<label for="Email">Email</label>
+						<input type="text" id="Email" name="Email" placeholder="email">
 						<br>
-						<input type="text" id="Email" name="Email">
-						<br>
-						<label for="password">Password</label>
-						<br>
-						<input type="password" id="password" name="password">
+						<input type="password" id="password" name="password" placeholder="password">
 						<br>
 						<p>OR</p>
-						<label for="Username">Value</label>
+						<input type="text" id="Username" name="Username" placeholder="username">
 						<br>
-						<input type="text" id="Username" name="Username" value="username" onkeypress="delete">
+						<input type="password" id="password" name="password" placeholder="password">
 						<br>
-						<label for="password">Password</label>
-						<br>
-						<input type="password" id="password" name="password">
-						<br>
-						<button id=logIn type="submit">Submit</button>
+						<button type="submit">Submit</button>
 					</form>
 				</td>
 				<td>
-					<form>
-						<label for="fname">First Name</label>
+					<form id="sign-up">
+						<input type="text" id="fname" name="fname" placeholder="first name">
 						<br>
-						<input type="text" id="fname" name="fname">
+						<input type="text" id="lname" name="lname" placeholder="last name">
 						<br>
-						<label for="lname">Last Name</label>
+						<input type="text" id="Email" name="Email" placeholder="email">
 						<br>
-						<input type="text" id="lname" name="lname">
+						<input type="text" id="Username" name="Username" placeholder="username">
 						<br>
-						<label for="Email">Email</label>
+						<input type="password" id="password" name="password" placeholder="password">
 						<br>
-						<input type="text" id="Email" name="Email">
-						<br>
-						<label for="Username">Username</label>
-						<br>
-						<input type="text" id="Username" name="Username">
-						<br>
-						<label for="password">Password</label>
-						<br>
-						<input type="password" id="password" name="password">
-						<br>
-						<button id=signUp type="submit">Submit</button>
+						<button type="submit">Submit</button>
 					</form>
 				</td>
 			</table>
 		</div>
-		<script type="text/javascript">
-			document.getElementById("logIn").addEventListener("click", function(){
-				alert("LOGIN TEST");
-				// collect all information
-
-				// send info to server
-
-				// recieve info and test
-			});
-			document.getElementById("signUp").addEventListener("click", function(){
-				alert("SIGNUP TEST");
-				// collect all information
-
-				// send info to server
-
-				// recieve info and test
-			});
-		</script>	
 	</body>
 </html>
