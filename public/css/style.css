@@ -5,6 +5,31 @@ h1
 	text-align: center;
 	font-size: 50px;
 }
+#nav ul
+{
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	width: 154.5px;
+	height: 30px;
+  	background-color: #f1f1f1;
+	text-align: center;
+	margin: auto;
+}
+#nav li
+{
+  display: inline-block;
+  color: #000;
+  padding: 6px 16px;
+  text-decoration: none;
+}
+#nav li:hover
+{
+  background-color: #555;
+  color: white;
+  margin: auto;
+  text-align: center;
+}
 #header
 {
 	background-size: auto;
@@ -22,6 +47,13 @@ p
 	text-align: center;
 	font-family: georgia;
 	font-size: 25px;
+}
+#login p
+{
+	color: #000000;
+	text-align: center;
+	font-family: georgia;
+	font-size: 20px;
 }
 table, th, td
 {
@@ -43,7 +75,7 @@ td
 	font-size: 18px;
 }
 
-input[type=submit]
+button[type=submit]
 {
 	background-color: #1e90ff;
 	border: none;
