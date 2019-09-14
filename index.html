@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <!-- home page for Contact Manager -->
-<html>
+<html lang="en">
 	<head>
+		<meta charset="ucf-8">
 		<title>Contact Manager</title>
 		<link href="./css/style.css" type="text/css" rel="stylesheet">
 		<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
@@ -42,7 +43,7 @@
 						<br>
 						<input type="password" id="password" name="password">
 						<br>
-						<button type="submit">Submit</button>
+						<button id=logIn type="submit">Submit</button>
 					</form>
 				</td>
 				<td>
@@ -67,10 +68,28 @@
 						<br>
 						<input type="password" id="password" name="password">
 						<br>
-						<button type="submit">Submit</button>
+						<button id=signUp type="submit">Submit</button>
 					</form>
 				</td>
 			</table>
 		</div>
+		<script type="text/javascript">
+			document.getElementById("logIn").addEventListener("click", function(){
+				alert("LOGIN TEST");
+				// collect all information
+
+				// send info to server
+
+				// recieve info and test
+			});
+			document.getElementById("signUp").addEventListener("click", function(){
+				alert("SIGNUP TEST");
+				// collect all information
+
+				// send info to server
+
+				// recieve info and test
+			});
+		</script>	
 	</body>
 </html>
