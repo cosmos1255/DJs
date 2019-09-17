@@ -6,14 +6,13 @@ function initLogin()
 
 	// send info to server
 	const api = "http://localhost:3000/api";
-	const apikey = "filler_key";
+	const apikey = "";
 	const url = api + "/" + lUser + "/" + lPass + "/" + apikey;
 
 	async function sendLogin()
 	{
 		const response = await fetch(url);
 		const data = await response.json();
-		alert("pausing");
 
 		// recieve info and test
 		if (data.name == "ok")
@@ -39,10 +38,26 @@ function initSignup()
 	var sPass = document.getElementById('signupPassword').value;
 
 	// send info to server
-	var api = "http://local:3000/api";
-	var apikey = "filler";
-	var url = api + "/" + fiName + "/" + laName + "/" + email + "/" + sUser + "/" + sPass + "/" + apikey;
+	const api = "http://localhost:3000/api";
+	const apikey = "";
+	const url = api + "/" + fiName + "/" + laName + "/" + email + "/" + sUser + "/" + sPass + "/" + apikey;
 
-	alert(url);
-	// recieve info and test
+	async function sendSignup()
+	{
+		const response = await fetch(url);
+		const data = await response.json();
+
+		// recieve info and test
+		if (data.name == "ok")
+		{
+			// load index2
+		} else
+		{
+			alert("Uh oh! Something went wrong.");
+		}
+	}
+
+	console.log(url);
+	sendSignup();
+
 }
