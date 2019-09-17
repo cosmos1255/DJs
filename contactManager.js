@@ -12,7 +12,11 @@ function addContact() {
 	let LName = document.getElementById().value;
 	let gender = document.getElementById().value;
 	let contact;
-};
+}
+
+function deleteContact() {
+	let dContact = document.getElementById().value;
+}
 
 function searchContacts() {
 	let searchString = document.getElementById(searchBar).value;
