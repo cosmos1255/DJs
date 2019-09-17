@@ -1,7 +1,7 @@
 h1
 {
 	color: #ffeeee;
-	font-family: georgia;
+	font-family: candara;
 	text-align: center;
 	font-size: 50px;
 }
@@ -45,17 +45,17 @@ p
 {
 	color: #ffffee;
 	text-align: center;
-	font-family: georgia;
+	font-family: candara;
 	font-size: 25px;
 }
 #login p
 {
 	color: #000000;
 	text-align: center;
-	font-family: georgia;
+	font-family: candara;
 	font-size: 20px;
 }
-table, th, td
+table
 {
 	border: 2px solid #000000;
 	border-collapse: collapse;
@@ -66,13 +66,14 @@ table, th, td
 th
 {
 	color: #000000;
-	font-family: georgia;
-	font-size: 20px;
+	font-family: candara;
+	font-size: 30px;
+	padding: 10px;
 }
 td
 {
-	padding: 40px;
-	font-family: georgia;
+	padding: 20px;
+	font-family: candara;
 	font-size: 18px;
 }
 
@@ -83,7 +84,7 @@ button[type=submit]
 	color: #eeeeee;
 	margin: 4px 2px;
 	padding: 7px 15px;
-	font-family: georgia;
+	font-family: candara;
 	font-size: 15px;
 }
 input[type=text], input[type=password]
@@ -92,9 +93,9 @@ input[type=text], input[type=password]
 	margin: 8px 0;
 	padding: 8px 8px;
 }
-#login
+#fname, #lname
 {
-	visibility: none;
+	width: 75px;
 }
 input::placeholder
 {
@@ -103,5 +104,5 @@ input::placeholder
 label
 {
 	color: #000000;
-	font-family: georgia;
+	font-family: candara;
 }
