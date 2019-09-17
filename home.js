@@ -5,12 +5,28 @@ function initLogin()
 	var lPass = document.getElementById('loginPassword').value;
 
 	// send info to server
-	var api = "http://local:3000/api";
-	var apikey = "filler";
-	var url = api + "/" + lUser + "/" + lPass + "/" + apikey;
+	const api = "http://localhost:3000/api";
+	const apikey = "filler_key";
+	const url = api + "/" + lUser + "/" + lPass + "/" + apikey;
 
-	alert(url);
-	// recieve info and test
+	async function sendLogin()
+	{
+		const response = await fetch(url);
+		const data = await response.json();
+		alert("pausing");
+
+		// recieve info and test
+		if (data.name == "ok")
+		{
+			// load index2
+		} else
+		{
+			alert("Invalid username or password.");
+		}
+	}
+
+	console.log(url);
+	sendLogin();
 }
 
 function initSignup()
