@@ -46,7 +46,7 @@ p
 	color: #ffffee;
 	text-align: center;
 	font-family: candara;
-	font-size: 25px;
+	font-size: 20px;
 }
 #login p
 {
@@ -59,7 +59,7 @@ table
 {
 	border: 2px solid #000000;
 	border-collapse: collapse;
-	border-color: #aaaaaa;
+	border-color: #888888;
 	background-color: white;
 	margin: auto;
 }
@@ -67,12 +67,14 @@ th
 {
 	color: #000000;
 	font-family: candara;
-	font-size: 30px;
-	padding: 10px;
+	font-size: 25px;
+	padding: 0;
 }
 td
 {
-	padding: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
 	font-family: candara;
 	font-size: 18px;
 }
@@ -95,7 +97,7 @@ input[type=text], input[type=password]
 }
 #fname, #lname
 {
-	width: 75px;
+	width: 72px;
 }
 input::placeholder
 {
