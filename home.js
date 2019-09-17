@@ -1,5 +1,4 @@
-function initLogin()
-{
+function initLogin() {
 	// collect all information
 	var lUser = document.getElementById('loginUsername').value;
 	var lPass = document.getElementById('loginPassword').value;
@@ -28,8 +27,7 @@ function initLogin()
 	sendLogin();
 }
 
-function initSignup()
-{
+function initSignup() {
 	// collect all information
 	var fiName = document.getElementById('fname').value;
 	var laName = document.getElementById('lname').value;
@@ -42,8 +40,7 @@ function initSignup()
 	const apikey = "";
 	const url = api + "/" + fiName + "/" + laName + "/" + email + "/" + sUser + "/" + sPass + "/" + apikey;
 
-	async function sendSignup()
-	{
+	async function sendSignup() {
 		const response = await fetch(url);
 		const data = await response.json();
 

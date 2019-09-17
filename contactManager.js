@@ -1,17 +1,21 @@
-var contacts;
+// const user;
+// var contacts;
 
-function init(){
-
+function viewContacts() {
+	console.log("test");	
 }
 
-function openContact(){
-	let newContact;
+function addContact() {
+	let pNumber = document.getElementById().value;
+	let Email = document.getElementById().value;
+	let FName = document.getElementById().value;
+	let LName = document.getElementById().value;
+	let gender = document.getElementById().value;
+	let contact;
+};
+
+function searchContacts() {
+	let searchString = document.getElementById(searchBar).value;
 }
 
-function addContact(){
-
-}
-
-function searchContacts(){
-
-}
+viewContacts();
