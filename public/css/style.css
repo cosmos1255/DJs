@@ -98,7 +98,7 @@ input[type=text], input[type=password]
 }
 input::placeholder
 {
-	color: #cccccc;
+	color: #999999;
 }
 label
 {
