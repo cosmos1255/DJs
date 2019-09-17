@@ -22,4 +22,8 @@ function searchContacts() {
 	let searchString = document.getElementById(searchBar).value;
 }
 
+function logout() {
+
+}
+
 viewContacts();
