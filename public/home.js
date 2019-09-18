@@ -31,7 +31,7 @@
 
   async function initSignup(e) {
     e.preventDefault();
-
+    if (document.getElementById('password') != ""){
     try {
       // collect all information
       const { value: username } = document.getElementById('username');
@@ -49,6 +49,7 @@
       console.error(error.message);
     }
   }
+}
 
   document.getElementById('loginButton').addEventListener('click', initLogin);
   document.getElementById('signupButton').addEventListener('click', initSignup);
