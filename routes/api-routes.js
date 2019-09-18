@@ -1,5 +1,5 @@
-// More info about express functions
-// https://expressjs.com/en/api.html#res.redirect
+const { Users } = require('../models/users');
+const bodyParser = require('body-parser')
 
 // Dependency
 var express = require('express');
@@ -8,16 +8,56 @@ const authorizationMiddleware = require('../middleware/authorization');
 var router = express.Router();
 
 // Import contact controller
-const contactController = require('../controllers/contactController');
-const AuthController = require('../controllers/auth')
+const ContactController = require('../controllers/contact');
+const AuthController = require('../controllers/auth');
+const StatusError = require('../utilities/status-error');
+
+router.use(bodyParser.json());
 
 // Set default API response
 router.get('/', function (req, res) {
-    res.json({
+  res.json({
     status: "API WORKING",
     message: "HERE IS THE API MESSAGE"
-    });
+  });
 });
+
+router.post('/signup', async (req, res, next) => {
+  try {
+    console.log(req.body);
+    const { username, password } = req.body;
+
+    if (!username || !password) {
+      throw new StatusError({
+        status: 400,
+        code: 'missing_parameters',
+        message: 'A username and password must be provided.'
+      });
+    }
+  
+    // find username and password
+    const user = await Users.findOne({
+      username
+    });
+  
+    if (user) {
+      throw new StatusError({
+        status: 400,
+        message: 'The given username is already taken.',
+        code: 'user_exists'
+      })
+    }
+  
+    await Users.create({
+      username,
+      password
+    });
+  
+    res.status(200).send();
+  } catch (error) {
+    next(error);
+  }
+})
 
 router.use(authorizationMiddleware);
 
@@ -26,21 +66,12 @@ router.route('/auth')
 
 // Contact routes
 router.route('/contacts')
-    .get(contactController.index)
-    .post(contactController.new);
+    .get(ContactController.getAll)
+    .post(ContactController.create);
 
-router.route('/contacts/:contact_id')
-    .get(contactController.view)
-    .patch(contactController.update)
-    .put(contactController.update)
-    .delete(contactController.delete);
-/*
-router.route('/login')
-    .get(contactController.login);
-
-router.route('/signup')
-    .post(contactController.user);
-*/
+router.route('/contacts/:id')
+    .put(ContactController.update)
+    .delete(ContactController.delete);
 
 // throw status error 500
 router.use((error, req, res, next) => {
