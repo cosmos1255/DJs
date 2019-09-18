@@ -151,16 +151,16 @@
     
     const addContactRow = document.createElement('tr');
     addContactRow.innerHTML = `
-      <td><input id="add-contact-name"></td>
-      <td><input id="add-contact-email"></td>
+      <td><input id="add-contact-name" required></td>
+      <td><input id="add-contact-email" required></td>
       <td>
-        <select id="add-contact-gender">>
+        <select id="add-contact-gender" required>>
           <option value="M">Male</option>
           <option value="F">Female</option>
           <option value="O">Other</option>
         </select>
       </td>
-      <td><input id="add-contact-phone"></td>
+      <td><input id="add-contact-phone" required></td>
       <td>
         <button id="add-contact-button">Add Contact</button>
       </td>
