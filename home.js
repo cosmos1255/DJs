@@ -4,25 +4,21 @@ function initLogin() {
 	var lPass = document.getElementById('loginPassword').value;
 
 	// send info to server
-	const api = "http://localhost:3000/api";
+	const api = "http://localhost:3000/filler";
 	const apikey = "";
 	const url = api + "/" + lUser + "/" + lPass + "/" + apikey;
 
-	async function sendLogin()
-	{
+	async function sendLogin() {
 		const response = await fetch(url);
 		const data = await response.json();
 
 		// recieve info and test
-		if (data.name == "ok")
-		{
+		if (data.name == "ok") {
 			// load index2
-		} else
-		{
-			alert("Invalid username or password.");
+		} else {
+			// show error message to client
 		}
 	}
-
 	console.log(url);
 	sendLogin();
 }
@@ -36,7 +32,7 @@ function initSignup() {
 	var sPass = document.getElementById('signupPassword').value;
 
 	// send info to server
-	const api = "http://localhost:3000/api";
+	const api = "http://localhost:3000/filler";
 	const apikey = "";
 	const url = api + "/" + fiName + "/" + laName + "/" + email + "/" + sUser + "/" + sPass + "/" + apikey;
 
@@ -45,16 +41,12 @@ function initSignup() {
 		const data = await response.json();
 
 		// recieve info and test
-		if (data.name == "ok")
-		{
+		if (data.name == "ok") {
 			// load index2
-		} else
-		{
-			alert("Uh oh! Something went wrong.");
+		} else {
+			// show error message to client
 		}
 	}
-
 	console.log(url);
 	sendSignup();
-
 }
