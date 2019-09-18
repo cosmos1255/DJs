@@ -8,48 +8,45 @@
     }
   }
   
-  async function initLogin() {
-    if (document.getElementById('username') != "") {
-      if (document.getElementById('password') != "") {
-        try {
-        // collect all information
-        const { value: username } = document.getElementById('username');
-        const { value: password } = document.getElementById('password');
-        const hashedPassword = window.MD5(password);
+  async function initLogin(e) {
+    e.preventDefault();
 
-        await window.authenticate(username, hashedPassword);
+    try {
+      // collect all information
+      const { value: username } = document.getElementById('username');
+      const { value: password } = document.getElementById('password');
+      const hashedPassword = window.MD5(password);
 
-        localStorage.setItem('username', username);
-        localStorage.setItem('password', hashedPassword);
+      await window.authenticate(username, hashedPassword);
 
-        // redirect to contacts page...
-        location.href = '/contacts.html';
-      } catch (error) {
-          console.error(error.message);
-      }
+      localStorage.setItem('username', username);
+      localStorage.setItem('password', hashedPassword);
+
+      // redirect to contacts page...
+      location.href = '/contacts.html';
+    } catch (error) {
+      console.error(error.message);
     }
   }
-}
-  async function initSignup() {
-    if (document.getElementById('username') != "") {
-      if (document.getElementById('password') != "") {
-        try {
-         // collect all information
-          const { value: username } = document.getElementById('username');
-          const { value: password } = document.getElementById('password');
-          const hashedPassword = window.MD5(password);
 
-          await window.signup(username, hashedPassword);
+  async function initSignup(e) {
+    e.preventDefault();
 
-          localStorage.setItem('username', username);
-          localStorage.setItem('password', hashedPassword);
+    try {
+      // collect all information
+      const { value: username } = document.getElementById('username');
+      const { value: password } = document.getElementById('password');
+      const hashedPassword = window.MD5(password);
 
-          // redirect to contacts page...
-          location.href = '/contacts.html';
-        } catch (error) {
-          console.error(error.message);
-        }
-      }
+      await window.signup(username, hashedPassword);
+
+      localStorage.setItem('username', username);
+      localStorage.setItem('password', hashedPassword);
+
+      // redirect to contacts page...
+      location.href = '/contacts.html';
+    } catch (error) {
+      console.error(error.message);
     }
   }
 })();
