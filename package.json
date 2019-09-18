@@ -4,27 +4,13 @@
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
-    "start": "webpack && node server.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.16.4",
     "mongoose": "^5.7.1",
     "atob": "^2.1.2",
-    "md5": "^2.2.1",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-globally": "^1.0.0",
-    "react-router": "^5.0.1",
-    "react-router-dom": "^5.0.1",
-    "@babel/preset-react": "^7.0.0",
-    "style-loader": "^1.0.0",
-    "css-loader": "^3.2.0",
-    "webpack": "^2.2.1",
-    "webpack-cli": "^3.3.5",
-    "babel-loader": "^8.0.5",
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "regenerator-runtime": "^0.13.3"
+    "md5": "git+https://github.com/pvorb/node-md5.git"
   },
   "engines": {
     "node": "8.x"

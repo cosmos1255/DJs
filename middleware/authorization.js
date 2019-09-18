@@ -23,6 +23,8 @@ module.exports = async function(req, res, next) {
       });
     }
   
+    req.auth = { username };
+    
     next();
   } 
   // catches error

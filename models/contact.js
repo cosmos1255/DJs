@@ -1,8 +1,6 @@
 const mongoose = require('./db');
 
-// our model or schema for our users in the database
 const ContactSchema = new mongoose.Schema({
-    // temporary schema
     name: 
     {
         type: String,
