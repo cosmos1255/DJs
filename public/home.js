@@ -49,4 +49,6 @@
       console.error(error.message);
     }
   }
+  document.getElementById('loginButton').addEventListener('click', initLogin);
+  document.getElementById('signupButton').addEventListener('click', initSignup);
 })();
