@@ -5,6 +5,11 @@ h1
 	text-align: center;
 	font-size: 50px;
 }
+h2
+{
+	font-family: candara;
+	text-align: center;
+}
 #nav ul
 {
 	list-style-type: none;
@@ -68,7 +73,7 @@ th
 	color: #000000;
 	font-family: candara;
 	font-size: 25px;
-	padding: 0;
+	padding: 20px;
 }
 td
 {
@@ -97,7 +102,7 @@ input[type=text], input[type=password]
 }
 #fname, #lname
 {
-	width: 72px;
+	width: 107px;
 }
 input::placeholder
 {

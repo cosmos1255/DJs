@@ -4,18 +4,20 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Contact Manager</title>
-		<link href="./css/style.css" type="text/css" rel="stylesheet">
+		<link href="./css/style.css" type="text/css" rel="stylesheet">]
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 	</head>
 	<body>
 		<div id="header">
-			<h1>Contact Manager</h1>
+			<h1 class="display-3">Contact Manager</h1>
 		</div>
 		<div id="login-signup-area">
 			<table>
 				<p>Create a new account or login to an existing account.</p>
 				<thead>
-					<th><h3>Login</h3></th>
-					<th><h3>Sign-Up</h3></th>
+					<th><h2>Login</h2></th>
+					<th><h2>Sign-Up</h2></th>
 				</thead>
 				<td>
 					<form id="login" class="form-group">
@@ -23,12 +25,12 @@
 						<br>
 						<input type="password" id="loginPassword" name="password" placeholder="password"/ required>
 						<br>
-						<button id="loginBtn" type="submit" onclick="initLogin()">Submit</button>
+						<button id="loginBtn" class="btn btn-primary" type="submit" onclick="initLogin()">Submit</button>
 					</form>
 				</td>
 				<td>
 					<form id="sign-up" class="form-group">
-						<input type="text" id="fname" name="fname" placeholder="first name" required="">
+						<input type="text" id="fname" name="fname" placeholder="first name" required>
 						<input type="text" id="lname" name="lname" placeholder="last name" required>
 						<br>
 						<input type="text" id="Email" name="Email" placeholder="email" required>
@@ -37,7 +39,7 @@
 						<br>
 						<input type="password" id="signupPassword" name="password" placeholder="password" required>
 						<br>
-						<button id="signupBtn" type="submit" onclick="initSignup()">Submit</button>
+						<button id="signupBtn" class="btn btn-primary" type="submit" onclick="initSignup()">Submit</button>
 					</form>
 				</td>
 			</table>
