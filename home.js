@@ -12,7 +12,8 @@ function initLogin() {
 
 	async function sendLogin() {
 		const response = await fetch(JSON.stringify(login));
-		const data = await response.json();
+		const rawData = await response.json();
+		const data = JSON.parse(rawData);
 		// recieve info and test
 		if (data.name == "ok") {
 			// load index2
@@ -43,7 +44,8 @@ function initSignup() {
 
 	async function sendSignup() {
 		const response = await fetch(signup);
-		const data = await response.json();
+		const rawData = await response.json();
+		const data = JSON.parse(rawData);
 		// recieve info and test
 		if (data.name == "ok") {
 			// load index2
