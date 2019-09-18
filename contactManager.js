@@ -2,7 +2,7 @@
 // var contacts;
 
 function viewContacts() {
-	console.log("test");	
+	console.log("test");
 }
 
 function addContact() {
