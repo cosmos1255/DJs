@@ -8,49 +8,47 @@
     }
   }
   
-  async function initLogin(e) {
-    e.preventDefault();
+  async function initLogin() {
+    if (document.getElementById('username') != "") {
+      if (document.getElementById('password') != "") {
+        try {
+        // collect all information
+        const { value: username } = document.getElementById('username');
+        const { value: password } = document.getElementById('password');
+        const hashedPassword = window.MD5(password);
 
-    try {
-      // collect all information
-      const { value: username } = document.getElementById('username');
-      const { value: password } = document.getElementById('password');
-      const hashedPassword = window.MD5(password);
+        await window.authenticate(username, hashedPassword);
 
-      await window.authenticate(username, hashedPassword);
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', hashedPassword);
 
-      localStorage.setItem('username', username);
-      localStorage.setItem('password', hashedPassword);
-
-      // redirect to contacts page...
-      location.href = '/contacts.html';
-    } catch (error) {
-      console.error(error.message);
-    }
-  }
-
-  async function initSignup(e) {
-    e.preventDefault();
-    if (document.getElementById('password') != ""){
-    try {
-      // collect all information
-      const { value: username } = document.getElementById('username');
-      const { value: password } = document.getElementById('password');
-      const hashedPassword = window.MD5(password);
-
-      await window.signup(username, hashedPassword);
-
-      localStorage.setItem('username', username);
-      localStorage.setItem('password', hashedPassword);
-
-      // redirect to contacts page...
-      location.href = '/contacts.html';
-    } catch (error) {
-      console.error(error.message);
+        // redirect to contacts page...
+        location.href = '/contacts.html';
+      } catch (error) {
+          console.error(error.message);
+      }
     }
   }
 }
+  async function initSignup() {
+    if (document.getElementById('username') != "") {
+      if (document.getElementById('password') != "") {
+        try {
+         // collect all information
+          const { value: username } = document.getElementById('username');
+          const { value: password } = document.getElementById('password');
+          const hashedPassword = window.MD5(password);
 
-  document.getElementById('loginButton').addEventListener('click', initLogin);
-  document.getElementById('signupButton').addEventListener('click', initSignup);
-})();
+          await window.signup(username, hashedPassword);
+
+          localStorage.setItem('username', username);
+          localStorage.setItem('password', hashedPassword);
+
+          // redirect to contacts page...
+          location.href = '/contacts.html';
+        } catch (error) {
+          console.error(error.message);
+        }
+      }
+    }
+  }
