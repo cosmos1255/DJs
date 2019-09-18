@@ -4,14 +4,15 @@ function initLogin() {
 	var lPass = document.getElementById('loginPassword').value;
 
 	// send info to server
-	const api = "http://localhost:3000/filler";
-	const apikey = "";
-	const url = api + "/" + lUser + "/" + lPass + "/" + apikey;
+	var login = {
+		"username" : lUser,
+		"password" : lPass
+	};
+	console.log("strigified json: " + JSON.stringify(login));
 
 	async function sendLogin() {
-		const response = await fetch(url);
+		const response = await fetch(JSON.stringify(login));
 		const data = await response.json();
-
 		// recieve info and test
 		if (data.name == "ok") {
 			// load index2
@@ -19,7 +20,6 @@ function initLogin() {
 			// show error message to client
 		}
 	}
-	console.log(url);
 	sendLogin();
 }
 
@@ -32,14 +32,18 @@ function initSignup() {
 	var sPass = document.getElementById('signupPassword').value;
 
 	// send info to server
-	const api = "http://localhost:3000/filler";
-	const apikey = "";
-	const url = api + "/" + fiName + "/" + laName + "/" + email + "/" + sUser + "/" + sPass + "/" + apikey;
+	var signup = {
+		"firstname" : fiName,
+		"lastname" : laName,
+		"email" : email,
+		"username" : sUser,
+		"password" : sPass
+	};
+	console.log("strigified json: " + JSON.stringify(signup));
 
 	async function sendSignup() {
-		const response = await fetch(url);
+		const response = await fetch(signup);
 		const data = await response.json();
-
 		// recieve info and test
 		if (data.name == "ok") {
 			// load index2
@@ -47,6 +51,5 @@ function initSignup() {
 			// show error message to client
 		}
 	}
-	console.log(url);
 	sendSignup();
 }
