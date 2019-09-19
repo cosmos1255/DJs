@@ -32,8 +32,6 @@
   async function initSignup(e) {
     e.preventDefault();
 
-    if (document.getElementById('password').value === "" ||
-        document.getElementById('username').value === "") break;
     try {
       // collect all information
       const { value: username } = document.getElementById('username');
