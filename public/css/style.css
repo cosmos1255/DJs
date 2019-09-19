@@ -1,14 +1,18 @@
+.page {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+.filter th input[placeholder]
+{
+  fint-size: 20pt;
+}
 h1
 {
 	color: #ffeeee;
 	font-family: candara;
 	text-align: center;
 	font-size: 50px;
-}
-h2
-{
-	font-family: candara;
-	text-align: center;
 }
 #nav ul
 {
@@ -43,8 +47,12 @@ h2
 }
 body
 {
+  margin: 0;
+  height: 100vh;
 	background: linear-gradient(-45deg,#35577D, #141E30);
 	background-repeat: repeat;
+  padding: 20px;
+  box-sizing: border-box;
 }
 p
 {
@@ -73,7 +81,7 @@ th
 	color: #000000;
 	font-family: candara;
 	font-size: 25px;
-	padding: 20px;
+	padding: 0;
 }
 td
 {
@@ -84,16 +92,6 @@ td
 	font-size: 18px;
 }
 
-button[type=submit]
-{
-	background-color: #1e90ff;
-	border: none;
-	color: #eeeeee;
-	margin: 4px 2px;
-	padding: 7px 15px;
-	font-family: candara;
-	font-size: 15px;
-}
 input[type=text], input[type=password]
 {
 	background-color: #ffffff;
@@ -102,7 +100,7 @@ input[type=text], input[type=password]
 }
 #fname, #lname
 {
-	width: 107px;
+	width: 72px;
 }
 input::placeholder
 {
@@ -112,4 +110,50 @@ label
 {
 	color: #000000;
 	font-family: candara;
+}
+
+#login {
+	width: 300px;
+    margin: auto;
+    background: #fafafa;
+    padding: 10px;
+}
+
+#login input {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+/* Input Styling */
+
+input {
+  padding: 10px 20px
+}
+
+/* Button Styling */
+
+button {
+	background-color: #1e90ff;
+	border: none;
+	color: #eeeeee;
+	padding: 7px 15px;
+	font-family: candara;
+	font-size: 15px;
+	cursor: pointer;
+	transition: 0.15s ease-in-out background-color;
+}
+
+button:hover {
+	background-color: #0577E6;
+}
+
+#login button {
+	display: block;
+	width: 100%;
+	margin-top: 4px;
+}
+
+table {
+  width: 100%;
+  margin-top: 10px;
 }
