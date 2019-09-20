@@ -1,29 +1,27 @@
 {
-  "name": "package.json",
-  "version": "1.0.0",
-  "description": "A way to organize contacts",
-  "main": "app.js",
+  "name": "hello-express",
+  "version": "0.0.1",
+  "description": "A simple Node app built on Express, instantly up and running.",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.7.1",
+    "atob": "^2.1.2",
+    "md5": "git+https://github.com/pvorb/node-md5.git"
+  },
+  "engines": {
+    "node": "8.x"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cosmos1255/DJs.git"
+    "url": "https://glitch.com/edit/#!/hello-express"
   },
-  "author": "DB & Js",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cosmos1255/DJs/issues"
-  },
-  "homepage": "https://ec2-18-221-247-1.us-east-2.compute.amazonaws.com",
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "express": "^4.17.1",
-    "mongodb": "^3.3.2",
-    "mongoose": "^5.6.13"
-  },
-  "devDependencies": {
-    "nodemon": "^1.19.2"
-  }
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }

@@ -1,57 +1,54 @@
-function initLogin() {
-	// collect all information
-	var lUser = document.getElementById('loginUsername').value;
-	var lPass = document.getElementById('loginPassword').value;
+(async () => {
+  if (window.config.username && window.config.password) {
+    try {
+      await window.authenticate(window.config.username, window.config.password);
+    } catch (error) {
+      localStorage.removeItem('username');
+      localStorage.removeItem('password');
+    }
+  }
+  
+  async function initLogin(e) {
+    e.preventDefault();
 
-	// send info to server
-	var login = {
-		"username" : lUser,
-		"password" : lPass
-	};
-	console.log("strigified json: " + JSON.stringify(login));
+    try {
+      // collect all information
+      const { value: username } = document.getElementById('username');
+      const { value: password } = document.getElementById('password');
+      const hashedPassword = window.MD5(password);
 
-	async function sendLogin() {
-		const response = await fetch(JSON.stringify(login));
-		const rawData = await response.json();
-		const data = JSON.parse(rawData);
-		// recieve info and test
-		if (data.name == "ok") {
-			// load index2
-		} else {
-			// show error message to client
-		}
-	}
-	sendLogin();
-}
+      await window.authenticate(username, hashedPassword);
 
-function initSignup() {
-	// collect all information
-	var fiName = document.getElementById('fname').value;
-	var laName = document.getElementById('lname').value;
-	var email = document.getElementById('Email').value;
-	var sUser = document.getElementById('signupUsername').value;
-	var sPass = document.getElementById('signupPassword').value;
+      localStorage.setItem('username', username);
+      localStorage.setItem('password', hashedPassword);
 
-	// send info to server
-	var signup = {
-		"firstname" : fiName,
-		"lastname" : laName,
-		"email" : email,
-		"username" : sUser,
-		"password" : sPass
-	};
-	console.log("strigified json: " + JSON.stringify(signup));
+      // redirect to contacts page...
+      location.href = '/contacts.html';
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
 
-	async function sendSignup() {
-		const response = await fetch(signup);
-		const rawData = await response.json();
-		const data = JSON.parse(rawData);
-		// recieve info and test
-		if (data.name == "ok") {
-			// load index2
-		} else {
-			// show error message to client
-		}
-	}
-	sendSignup();
-}
+  async function initSignup(e) {
+    e.preventDefault();
+
+    try {
+      // collect all information
+      const { value: username } = document.getElementById('username');
+      const { value: password } = document.getElementById('password');
+      const hashedPassword = window.MD5(password);
+
+      await window.signup(username, hashedPassword);
+
+      localStorage.setItem('username', username);
+      localStorage.setItem('password', hashedPassword);
+
+      // redirect to contacts page...
+      location.href = '/contacts.html';
+    } catch (error) {
+      console.error(error.message);
+    }
+  }
+  document.getElementById('loginButton').addEventListener('click', initLogin);
+  document.getElementById('signupButton').addEventListener('click', initSignup);
+})();
