@@ -17,6 +17,9 @@ Use the full path to point there or navigate to the location of the pem and then
 
 ### To connect from UNIX based terminal (Mac OS, Ubuntu, etc.)
 ```
+$ sudo chmod 400 "sampleMeanContactList.pem" 
+```
+```
 $ ssh -i "sampleMeanContactList.pem" ubuntu@ec2-18-221-247-1.us-east-2.compute.amazonaws.com
 ```
 ### To connect from Windows
@@ -26,4 +29,4 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html
 
 (Do not forget to run Node)
 
-**URL:** http://ec2-18-221-247-1.us-east-2.compute.amazonaws.com:8080/
+**URL:** http://ec2-18-221-247-1.us-east-2.compute.amazonaws.com:3000/
