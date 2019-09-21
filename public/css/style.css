@@ -1,7 +1,6 @@
 .page {
-  max-width: 1000px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
 }
 
 h1
@@ -71,7 +70,8 @@ table
 	border-collapse: collapse;
 	border-color: #888888;
 	background-color: white;
-	margin: auto;
+   float: center;
+   width: 100%;
 }
 th
 {
@@ -79,14 +79,15 @@ th
 	font-family: candara;
 	font-size: 25px;
 	padding: 0;
+   position: relative;
+   text-align: center;
 }
 td
 {
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 20px;
+	padding: 40px;
 	font-family: candara;
 	font-size: 18px;
+   text-align:center;
 }
 
 input[type=text], input[type=password]
@@ -123,8 +124,9 @@ label
 
 /* Input Styling */
 
-input {
-  padding: 10px 20px
+input
+{
+  padding: 10px 15px
 }
 
 /* Button Styling */
@@ -133,7 +135,7 @@ button {
 	background-color: #1e90ff;
 	border: none;
 	color: #eeeeee;
-	padding: 7px 15px;
+	padding: 7px 10px;
 	font-family: candara;
 	font-size: 15px;
 	cursor: pointer;
@@ -148,9 +150,4 @@ button:hover {
 	display: block;
 	width: 100%;
 	margin-top: 4px;
-}
-
-table {
-  width: 100%;
-  margin-top: 10px;
 }
