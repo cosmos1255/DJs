@@ -7,9 +7,27 @@
       localStorage.removeItem('password');
     }
   }
-  
+
   async function initLogin(e) {
     e.preventDefault();
+
+    let y = document.getElementById('username').value;
+    if (y == "")
+    {
+      document.getElementById('username').placeholder="USERNAME REQUIRED";
+      document.getElementById('username').style="background-color: #ffbbbb;";
+      document.getElementById('password').placeholder="PASSWORD REQUIRED";
+      document.getElementById('password').style="background-color: #ffbbbb;";
+      return;
+   };
+
+    let x = document.getElementById('password').value;
+    if (x == "")
+    {
+      document.getElementById('password').placeholder="PASSWORD REQUIRED";
+      document.getElementById('password').style="background-color: #ffbbbb;";
+      return;
+    };
 
     try {
       // collect all information
@@ -31,6 +49,24 @@
 
   async function initSignup(e) {
     e.preventDefault();
+
+    let y = document.getElementById('username').value;
+    if (y == "")
+    {
+      document.getElementById('username').placeholder="USERNAME REQUIRED";
+      document.getElementById('username').style="background-color: #ffbbbb;";
+      document.getElementById('password').placeholder="PASSWORD REQUIRED";
+      document.getElementById('password').style="background-color: #ffbbbb;";
+      return;
+    };
+
+    let x = document.getElementById('password').value;
+    if (x == "")
+    {
+      document.getElementById('password').placeholder="PASSWORD REQUIRED";
+      document.getElementById('password').style="background-color: #ffbbbb;";
+      return;
+    };
 
     try {
       // collect all information
