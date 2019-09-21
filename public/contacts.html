@@ -10,52 +10,42 @@
 		<script src="./shared/config.js"></script>
 		<script src="./shared/authenticate.js"></script>
 
-		<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	</head>
 	<body>
-    <h1 id="header">Contact Manager</h1>
-    <!-- <div class="page">
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Gender</th>
-            <th>Phone</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody id="contact-list"></tbody>
-      </table>
-    </div> -->
-		<button id = "logout" style = "float:right">Logout</button>
-		<div class="container">
-		    <div class="row">
-		        <div class="panel panel-primary filterable">
-		            <div class="panel-heading">
-		                <!-- <h3 class="panel-title">Users</h3> -->
-		                <div class="pull-right">
-		                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
-		                </div>
-		            </div>
-		            <table class="table">
-		                <thead>
-		                    <tr class="filters">
-		                        <th><input type="text" class="form-control" placeholder="Name" disabled></th>
-		                        <th><input type="text" class="form-control" placeholder="Email" disabled></th>
-		                        <th><input type="text" class="form-control" placeholder="Gender" disabled></th>
-		                        <th><input type="text" class="form-control" placeholder="Phone" disabled></th>
-														<!-- <th><input type="text" class="form-control" placeholder="Actions" disabled></th> -->
-		                    </tr>
-		                </thead>
-		                <tbody id="contact-list"></tbody>
-		            </table>
-		        </div>
-		    </div>
+  	<h1 id="header">Contact Manager</h1>
+	<div class="nav">
+		<input class="search" id="myInput" type="text" placeholder="Search">
+	 	<button class="logout" style="float:right;" id="logout">Logout</button>
+	</div>
+	    <div class="page">
+	      <table>
+	        <thead>
+	          <tr>
+	            <th>Name</th>
+	            <th>Email</th>
+	            <th>Gender</th>
+	            <th>Phone</th>
+	            <th>Actions</th>
+	          </tr>
+	        </thead>
+	        <tbody id="contact-list"></tbody>
+	      </table>
 		</div>
+
+	<script>
+		$(document).ready(function(){
+			$("#myInput").on("keyup", function() {
+			 var value = $(this).val().toLowerCase();
+			 $("#contact-list tr").filter(function() {
+				$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+			 });
+			});
+		});
+	</script>
+
 		<script src="./contacts.js"></script>
 		<script src="./tableFilter.js"></script>
 	</body>
