@@ -9,8 +9,8 @@ var app = express();
 const apiRoutes = require('./routes/api-routes');
 
 // setup static files
-app.use(express.static('public'));
-app.use(express.static('node_modules'));
+app.use(express.static('public', { dotfiles: 'allow' }));
+app.use(express.static('node_modules', { dotfiles: 'allow' }));
 
 // our port
 var port = 8080;
