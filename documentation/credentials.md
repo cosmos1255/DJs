@@ -30,3 +30,5 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html
 (Do not forget to run Node)
 
 **URL:** http://ec2-18-221-247-1.us-east-2.compute.amazonaws.com:3000/
+Or:
+**URL:** http://www.djscop4331.rocks/
