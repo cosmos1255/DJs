@@ -13,7 +13,7 @@ app.use(express.static('public'));
 app.use(express.static('node_modules'));
 
 // our port
-var port = 3000;
+var port = 8080;
 
 // use api routes in the app
 app.use('/api', apiRoutes);
