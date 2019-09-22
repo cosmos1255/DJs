@@ -13,7 +13,7 @@ app.use(express.static('public', { dotfiles: 'allow' }));
 app.use(express.static('node_modules', { dotfiles: 'allow' }));
 
 // our port
-var port = 443;
+var port = 8080;
 
 // use api routes in the app
 app.use('/api', apiRoutes);
