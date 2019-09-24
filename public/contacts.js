@@ -34,6 +34,58 @@
     };
 
     // Add Contacts
+    const addContactRow = document.createElement('tr');
+    addContactRow.innerHTML = `
+      <td><input id="add-contact-name" required></td>
+      <td><input id="add-contact-email" required></td>
+      <td>
+        <select id="add-contact-gender" required>>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+          <option value="O">Other</option>
+        </select>
+      </td>
+      <td><input id="add-contact-phone" required></td>
+      <td>
+        <button id="add-contact-button">Add Contact</button>
+      </td>
+    `;
+
+    contactListElement.appendChild(addContactRow);
+
+    const addContact = {
+      name: contactListElement.querySelector('#add-contact-name'),
+      email: contactListElement.querySelector('#add-contact-email'),
+      gender: contactListElement.querySelector('#add-contact-gender'),
+      phone: contactListElement.querySelector('#add-contact-phone'),
+      button: contactListElement.querySelector('#add-contact-button')
+    };
+
+    addContact.button.addEventListener('click', async () => {
+      const response = await fetch(`/api/contacts`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Basic ${btoa(`${window.config.username}:${window.config.password}`)}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: addContact.name.value,
+          email: addContact.email.value,
+          gender: addContact.gender.value,
+          phone: addContact.phone.value
+        })
+      });
+
+      const content = response.headers.get('Content-Type') && response.headers.get('Content-Type').includes('json') ? await response.json() : await response.text();
+
+      if (response.status >= 400) {
+        throw content;
+      }
+
+      contacts.push(content);
+
+      render();
+    });
     // Delete Contacts
     // Edit Contacts
     contacts.forEach((contact, index) => {
@@ -148,61 +200,7 @@
 
       contactListElement.appendChild(row);
     });
-
-    const addContactRow = document.createElement('tr');
-    addContactRow.innerHTML = `
-      <td><input id="add-contact-name" required></td>
-      <td><input id="add-contact-email" required></td>
-      <td>
-        <select id="add-contact-gender" required>>
-          <option value="M">Male</option>
-          <option value="F">Female</option>
-          <option value="O">Other</option>
-        </select>
-      </td>
-      <td><input id="add-contact-phone" required></td>
-      <td>
-        <button id="add-contact-button">Add Contact</button>
-      </td>
-    `;
-
-    contactListElement.appendChild(addContactRow);
-
-    const addContact = {
-      name: contactListElement.querySelector('#add-contact-name'),
-      email: contactListElement.querySelector('#add-contact-email'),
-      gender: contactListElement.querySelector('#add-contact-gender'),
-      phone: contactListElement.querySelector('#add-contact-phone'),
-      button: contactListElement.querySelector('#add-contact-button')
-    };
-
-    addContact.button.addEventListener('click', async () => {
-      const response = await fetch(`/api/contacts`, {
-        method: 'POST',
-        headers: {
-          Authorization: `Basic ${btoa(`${window.config.username}:${window.config.password}`)}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          name: addContact.name.value,
-          email: addContact.email.value,
-          gender: addContact.gender.value,
-          phone: addContact.phone.value
-        })
-      });
-
-      const content = response.headers.get('Content-Type') && response.headers.get('Content-Type').includes('json') ? await response.json() : await response.text();
-
-      if (response.status >= 400) {
-        throw content;
-      }
-
-      contacts.push(content);
-
-      render();
-    });
   }
-
 
   const contacts = await getContacts();
   render();
