@@ -54,7 +54,10 @@ router.post('/signup', async (req, res, next) => {
       password
     });
     
-    res.send(Users.username, Users.password);
+    throw new StatusError({
+        status: 200,
+        message: "Contact Added Successfully"
+      });
   
     res.status(200).send();
   } catch (error) {
