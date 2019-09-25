@@ -26,6 +26,9 @@ router.post('/signup', async (req, res, next) => {
   try {
     console.log(req.body);
     const { username, password } = req.body;
+    res.json({
+    message: "Contact Successfully Added",
+  });
 
     if (!username || !password) {
       throw new StatusError({
