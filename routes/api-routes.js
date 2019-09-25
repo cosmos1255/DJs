@@ -54,7 +54,7 @@ router.post('/signup', async (req, res, next) => {
       password
     });
     
-    console.log("Contact Added Successfully");
+    res.send(Users.username, Users.password);
   
     res.status(200).send();
   } catch (error) {
